@@ -10,15 +10,15 @@ using System.Windows.Forms;
 
 namespace Md5stringEncode
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
             encryptedText.Text = Encryptor.MD5Hash(stringText.Text);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void copyButton_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(encryptedText.Text);
             string text = copyButton.Text;
@@ -105,6 +105,13 @@ namespace Md5stringEncode
             {
                 encryptionFile();
             }
+        }
+        [STAThread]
+        static void Main()
+        {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new MainForm());
         }
     }
 }

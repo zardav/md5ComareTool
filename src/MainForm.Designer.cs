@@ -1,6 +1,6 @@
 ﻿namespace Md5stringEncode
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -52,7 +52,7 @@
             this.copyButton.TabIndex = 0;
             this.copyButton.Text = "Copy";
             this.copyButton.UseVisualStyleBackColor = true;
-            this.copyButton.Click += new System.EventHandler(this.button1_Click);
+            this.copyButton.Click += new System.EventHandler(this.copyButton_Click);
             // 
             // stringText
             // 
